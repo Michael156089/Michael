@@ -1,3 +1,0 @@
-imapclient
-pyzmail
-twilio

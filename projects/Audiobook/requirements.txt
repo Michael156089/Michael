@@ -1,4 +1,0 @@
-pyttsx3
-PyPDF2 
-threading
-keyboard

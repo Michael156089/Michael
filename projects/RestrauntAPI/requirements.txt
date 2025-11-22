@@ -1,3 +1,0 @@
-python 3.9
-django3
-djangorestframework

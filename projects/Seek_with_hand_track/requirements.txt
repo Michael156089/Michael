@@ -1,4 +1,0 @@
-mediapipe
-cv
-pyautogui
-numpy
