@@ -11,7 +11,7 @@
 
 <body>
 
-    <!-- Écran de Connexion -->
+
     <div id="login-screen">
         <div class="login-container">
             <div class="user-icon">
@@ -35,10 +35,10 @@
         </div>
     </div>
 
-    <!-- Bureau (Desktop) -->
+
     <div id="desktop" class="hidden">
 
-        <!-- Icônes du Bureau -->
+
         <div class="desktop-icons">
             <div class="icon" onclick="openWindow('bio')">
                 <img src="https://img.icons8.com/color/96/000000/user-folder.png" alt="Bio">
@@ -58,9 +58,8 @@
             </div>
         </div>
 
-        <!-- Fenêtres (Windows) -->
 
-        <!-- Fenêtre Biographie -->
+
         <div id="window-bio" class="window hidden" style="top: 10%; left: 20%;">
             <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
                 <div class="title-text"><img src="https://img.icons8.com/color/48/000000/user-folder.png"
@@ -92,7 +91,7 @@
             </div>
         </div>
 
-        <!-- Fenêtre Projets -->
+
         <div id="window-projects" class="window hidden" style="top: 15%; left: 25%; width: 600px;">
             <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
                 <div class="title-text"><img src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"
@@ -112,7 +111,7 @@
                     </ul>
                 </div>
                 <div class="main-view">
-                    <!-- Vue Projets -->
+
                     <div id="view-projects" class="file-grid">
                         <div class="file-item"
                             onclick="window.open('https://github.com/Michael156089/Discord-Bot-Manager.git', '_blank')">
@@ -150,7 +149,7 @@
             </div>
         </div>
 
-        <!-- Fenêtre Contact -->
+
         <div id="window-contact" class="window hidden" style="top: 20%; left: 30%;">
             <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
                 <div class="title-text"><img src="https://img.icons8.com/color/48/000000/address-book.png"
@@ -176,7 +175,7 @@
             </div>
         </div>
 
-        <!-- Fenêtre Compétences -->
+
         <div id="window-skills" class="window hidden" style="top: 25%; left: 35%;">
             <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
                 <div class="title-text"><img src="https://img.icons8.com/color/48/000000/brain.png" class="win-icon">
@@ -248,7 +247,7 @@
             </div>
         </div>
 
-        <!-- Barre des tâches -->
+
         <div class="taskbar">
             <div class="start-button" onclick="toggleStartMenu()">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/1024px-Windows_logo_-_2012.svg.png"
@@ -272,7 +271,7 @@
             </div>
         </div>
 
-        <!-- Menu Démarrer -->
+
         <div id="start-menu" class="hidden">
             <div class="start-left">
                 <div class="start-item" onclick="openWindow('bio')"><img
