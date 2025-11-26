@@ -1,0 +1,59 @@
+# Guide de Maintenance du Portfolio
+
+Ce guide t'explique comment mettre à jour ton portfolio toi-même. Tu n'as besoin que d'un éditeur de texte (comme le Bloc-notes ou VS Code).
+
+## 1. Ajouter ou Supprimer un Projet
+
+Ouvre le fichier [index.html](file:///c:/Users/julien/d%5Ddd/index.html) et cherche la section `<!-- Vue Projets -->`.
+
+### Pour ajouter un projet :
+Copie ce bloc de code et colle-le à la suite des autres `<div class="file-item">` :
+
+```html
+<div class="file-item" onclick="window.open('LIEN_VERS_TON_PROJET', '_blank')">
+    <img src="LIEN_DE_L_ICONE" alt="Nom du Projet">
+    <span>Nom du Projet</span>
+</div>
+```
+*Remplace `LIEN_VERS_TON_PROJET`, `LIEN_DE_L_ICONE` et `Nom du Projet` par tes infos.*
+
+### Pour supprimer un projet :
+Supprime simplement tout le bloc `<div class="file-item">...</div>` correspondant au projet que tu veux retirer.
+
+---
+
+## 2. Mettre à jour les Compétences
+
+Ouvre [index.html](file:///c:/Users/julien/d%5Ddd/index.html) et cherche la section `<!-- Fenêtre Compétences -->`.
+
+Chaque compétence ressemble à ceci :
+
+```html
+<div class="skill-item">
+    <div class="skill-header">
+        <span class="skill-name">Nom de la Compétence</span>
+        <span class="skill-level learning">Niveau (ex: Débutant)</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-progress" style="width: 40%;"></div>
+    </div>
+</div>
+```
+
+- **Changer le nom** : Modifie le texte dans `<span class="skill-name">`.
+- **Changer le niveau (texte)** : Modifie le texte dans `<span class="skill-level ...">`.
+- **Changer la couleur du niveau** : Change la classe `learning` par `strong` (vert) ou `weak` (rouge).
+- **Changer la barre de progression** : Modifie le pourcentage dans `style="width: 40%;"`.
+
+---
+
+## 3. Modifier la Biographie
+
+Ouvre [index.html](file:///c:/Users/julien/d%5Ddd/index.html) et cherche `<!-- Fenêtre Biographie -->`.
+Tu peux modifier le texte à l'intérieur des balises `<p>`.
+
+---
+
+## 4. Changer l'image de profil
+
+Remplace simplement le fichier [images/profile.jpg](file:///c:/Users/julien/d%5Ddd/images/profile.jpg) par ta nouvelle image (garde le même nom et format), ou modifie le lien `src="images/profile.jpg"` dans [index.html](file:///c:/Users/julien/d%5Ddd/index.html) pour pointer vers une autre image.
