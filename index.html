@@ -1,309 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio de mica</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de mica </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-
-    <div id="login-screen">
-        <div class="login-container">
-            <div class="user-icon">
-                <img src="images/profile.jpg" alt="User">
-            </div>
-            <h2 class="username">Michael</h2>
-
-            <div class="input-group">
-                <input type="password" id="password-input" placeholder="Mot de passe">
-                <button id="login-btn"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <div id="password-hint" class="post-it">
-                <p>Indice : <span id="generated-pass">????</span></p>
-            </div>
-            <p id="error-msg">Mot de passe incorrect</p>
+    <body>
+        <div class="welcome-screen">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Cliquez n'importe où pour entrer.</p>
         </div>
 
-        <div class="login-footer">
-            <div class="branding">Windows 7 Édition Mk3Ang7l</div>
-        </div>
-    </div>
+        <div class="background-overlay"></div>
+        <div
+            class="background-gif"
+            style="background-image: url(&quot;images/background.gif&quot;)"
+        ></div>
 
-
-    <div id="desktop" class="hidden">
-
-
-        <div class="desktop-icons">
-            <div class="icon" onclick="openWindow('bio')">
-                <img src="https://img.icons8.com/color/96/000000/user-folder.png" alt="Bio">
-                <span>Biographie</span>
-            </div>
-            <div class="icon" onclick="openWindow('projects')">
-                <img src="https://img.icons8.com/color/96/000000/folder-invoices--v1.png" alt="Projets">
-                <span>Projets</span>
-            </div>
-            <div class="icon" onclick="openWindow('contact')">
-                <img src="https://img.icons8.com/color/96/000000/address-book.png" alt="Contact">
-                <span>Contacts</span>
-            </div>
-            <div class="icon" onclick="openWindow('skills')">
-                <img src="https://img.icons8.com/color/96/000000/brain.png" alt="Skills">
-                <span>Compétences</span>
-            </div>
-        </div>
-
-
-
-        <div id="window-bio" class="window hidden" style="top: 10%; left: 20%;">
-            <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
-                <div class="title-text"><img src="https://img.icons8.com/color/48/000000/user-folder.png"
-                        class="win-icon"> Biographie</div>
-                <div class="window-controls">
-                    <button class="minimize" onclick="minimizeWindow('bio')">_</button>
-                    <button class="maximize">□</button>
-                    <button class="close" onclick="closeWindow('bio')">X</button>
-                </div>
-            </div>
-            <div class="window-content">
-                <div class="bio-header">
-                    <img src="images/profile.jpg" alt="Profile" class="bio-pic">
-                    <div>
-                        <h2>Michael (Mk3Ang7l)</h2>
-                        <p></p>
+        <main class="portfolio-container main-content" style="display: none;">
+            <header class="hero-section">
+                <div class="hero-content">
+                    <div class="profile-container" data-tilt>
+                        <img
+                            src="images/profile.jfif"
+                            alt="Michael"
+                            class="profile-pic"
+                        />
                     </div>
-                </div>
-                <hr>
-                <div class="bio-body">
-                    <p><strong>Âge :</strong> 17 ans (Né le 26 août 2009)</p>
-                    <p><strong>Passions :</strong> Python, JavaScript.</p>
-                    <p><strong>Cause :</strong> Le Globalisme </p>
-                    <p><strong>Objectif Ultime :</strong> Créer un jeu vidéo avant de mourir.</p>
-                    <p><a href="https://www.paypal.me/MicaPaul138" target="_blank"
-                            style="color: #0066cc; text-decoration: none; font-weight: bold;">Me soutenir sur PayPal
-                            (MicaPaul138)</a></p>
-                </div>
-            </div>
-        </div>
+                    <div class="bio-container">
+                        <h1 class="glitch" data-text="Michael (Mk3Ang8l)">
+                            Michael (Mk3Ang7l)
+                        </h1>
+                        <p class="tagline">
+                            Developeur debutant | Passionné par Python & Gd
+                            script
+                        </p>
+                        <div class="bio-details">
+                            <p>
+                                <strong>Âge :</strong> 16 ans (Né le 26 août
+                                2009)
+                            </p>
+                            <p>
+                                <strong>Passions :</strong> Dessins modelisation
+                                3d , jeux videos .
+                            </p>
 
+                            <p>
+                                <strong>Ajoutez moi sur 3ds:</strong> 0871-4283-2385
 
-        <div id="window-projects" class="window hidden" style="top: 15%; left: 25%; width: 600px;">
-            <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
-                <div class="title-text"><img src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"
-                        class="win-icon"> Mes Projets</div>
-                <div class="window-controls">
-                    <button class="minimize" onclick="minimizeWindow('projects')">_</button>
-                    <button class="maximize">□</button>
-                    <button class="close" onclick="closeWindow('projects')">X</button>
-                </div>
-            </div>
-            <div class="window-content explorer-style">
-                <div class="sidebar">
-                    <ul>
-                        <li onclick="switchProjectView('favorites')" id="nav-favorites">Favoris</li>
-                        <li onclick="switchProjectView('desktop')" id="nav-desktop">Bureau</li>
-                        <li class="active" onclick="switchProjectView('projects')" id="nav-projects">Projets</li>
-                    </ul>
-                </div>
-                <div class="main-view">
-
-                    <div id="view-projects" class="file-grid">
-                        <div class="file-item"
-                            onclick="window.open('https://github.com/Michael156089/Discord-Bot-Manager.git', '_blank')">
-                            <img src="https://img.icons8.com/color/48/000000/discord-logo.png" alt="Bot Manager">
-                            <span>Bot Manager</span>
+                            </p>
                         </div>
-                        <div class="file-item"
-                            onclick="window.open('https://github.com/Michael156089/PokePal.git', '_blank')">
-                            <img src="https://img.icons8.com/color/48/000000/pokeball-2.png" alt="PokePal">
-                            <span>PokePal AI</span>
-                        </div>
-                    </div>
-
-                    <!-- Vue Favoris (Vide pour l'instant) -->
-                    <div id="view-favorites" class="file-grid hidden">
-                        <p style="color: #666; font-style: italic; padding: 10px;">Aucun favori pour le moment.</p>
-                    </div>
-
-                    <!-- Vue Bureau (Raccourcis) -->
-                    <div id="view-desktop" class="file-grid hidden">
-                        <div class="file-item" onclick="openWindow('bio')">
-                            <img src="https://img.icons8.com/color/48/000000/user-folder.png" alt="Bio">
-                            <span>Biographie</span>
-                        </div>
-                        <div class="file-item" onclick="openWindow('contact')">
-                            <img src="https://img.icons8.com/color/48/000000/address-book.png" alt="Contact">
-                            <span>Contacts</span>
-                        </div>
-                        <div class="file-item" onclick="openWindow('skills')">
-                            <img src="https://img.icons8.com/color/48/000000/brain.png" alt="Skills">
-                            <span>Compétences</span>
+                                             </div>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary"
+                                >Voir mes projets</a
+                            >
+                            <a
+                                href="https://www.paypal.me/MicaPaul138"
+                                target="_blank"
+                                class="btn btn-secondary"
+                                >Me soutenir</a
+                            >
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </header>
 
+            <section id="projects" class="projects-section">
+                <h2 class="section-title">Mes Projets</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-tilt>
+                        <div class="project-icon">
+                            <i class="fa-brands fa-discord"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Discord Bot Manager</h3>
+                            <p>
+                                Un bot puissant pour gérer vos instances de bots
+                                Discord en toute simplicité.
+                            </p>
+                            <a
+                                href="https://github.com/Michael156089/Discord-Bot-Manager.git"
+                                target="_blank"
+                                class="project-link"
+                                >Explorer <i class="fa-solid fa-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
 
-        <div id="window-contact" class="window hidden" style="top: 20%; left: 30%;">
-            <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
-                <div class="title-text"><img src="https://img.icons8.com/color/48/000000/address-book.png"
-                        class="win-icon"> Contacts</div>
-                <div class="window-controls">
-                    <button class="minimize" onclick="minimizeWindow('contact')">_</button>
-                    <button class="maximize">□</button>
-                    <button class="close" onclick="closeWindow('contact')">X</button>
-                </div>
-            </div>
-            <div class="window-content">
-                <ul class="contact-list">
-                    <li><i class="fa-brands fa-discord" style="color: #5865F2;"></i> Discord:
-                        <strong>mk3ang8l</strong>
-                    </li>
-                    <li><i class="fa-brands fa-github" style="color: #333;"></i> GitHub:
-                        <strong>github.com/Michael156089</strong>
-                    </li>
-                    <li><i class="fa-solid fa-envelope" style="color: #ea4335;"></i> Email:
-                        <strong>wobligo@gmail.com</strong>
-                    </li>
-                </ul>
-            </div>
-        </div>
+                    <div class="project-card" data-tilt>
+                        <div class="project-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>PokePal AI</h3>
+                            <p>
+                                Un assistant IA intelligent dédié à l'univers
+                                Pokémon, utilisant Gemini (mon premier repo
+                                soyez indulgents).
+                            </p>
+                            <a
+                                href="https://github.com/Michael156089/PokePal.git"
+                                target="_blank"
+                                class="project-link"
+                                >Explorer <i class="fa-solid fa-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
 
-
-        <div id="window-skills" class="window hidden" style="top: 25%; left: 35%;">
-            <div class="title-bar" onmousedown="dragElement(this.parentElement, event)">
-                <div class="title-text"><img src="https://img.icons8.com/color/48/000000/brain.png" class="win-icon">
-                    Compétences</div>
-                <div class="window-controls">
-                    <button class="minimize" onclick="minimizeWindow('skills')">_</button>
-                    <button class="maximize">□</button>
-                    <button class="close" onclick="closeWindow('skills')">X</button>
-                </div>
-            </div>
-            <div class="window-content">
-                <h3>Mes Compétences</h3>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Résolution de problèmes</span>
-                            <span class="skill-level strong">Fort</span>
+                    <div class="project-card coming-soon" data-tilt>
+                        <div class="project-icon">
+                            <i class="fa-solid fa-gamepad"></i>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Créativité</span>
-                            <span class="skill-level weak">Limité</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 30%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Mémoire</span>
-                            <span class="skill-level weak">Variable</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 50%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-level learning">Débutant</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 40%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">JavaScript</span>
-                            <span class="skill-level learning">En apprentissage</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 35%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Modélisation 3D</span>
-                            <span class="skill-level learning">En apprentissage</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 25%;"></div>
+                        <div class="project-info">
+                            <h3>Projet Secret</h3>
+                            <p>soyez patients</p>
+                            <span class="status-badge">Bientôt disponible</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
 
-
-        <div class="taskbar">
-            <div class="start-button" onclick="toggleStartMenu()">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/1024px-Windows_logo_-_2012.svg.png"
-                    alt="Start">
-            </div>
-            <div class="taskbar-icons">
-                <div class="task-icon" onclick="openWindow('bio')"><img
-                        src="https://img.icons8.com/color/48/000000/user-folder.png"></div>
-                <div class="task-icon" onclick="openWindow('projects')"><img
-                        src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"></div>
-                <div class="task-icon" onclick="openWindow('skills')"><img
-                        src="https://img.icons8.com/color/48/000000/brain.png"></div>
-            </div>
-            <div class="system-tray">
-                <div class="tray-icon"><i class="fa-solid fa-volume-high"></i></div>
-                <div class="tray-icon"><i class="fa-solid fa-wifi"></i></div>
-                <div class="clock">
-                    <div id="time">12:00</div>
-                    <div id="date">23/11/2025</div>
+            <section id="contact" class="contact-section">
+                <div class="contact-card">
+                    <h2>On discute ?</h2>
+                    <div class="contact-links">
+                        <a
+                            href="https://github.com/Michael156089"
+                            target="_blank"
+                            class="contact-item"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a
+                            href="#"
+                            class="contact-item tooltip"
+                            data-tooltip="mk3ang8l"
+                        >
+                            <i class="fa-brands fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                        <a href="mailto:wobligo@gmail.com" class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
 
+        <footer class="main-footer">
+            <p>&copy; 2025 Michael (Mk3Ang7l). Portfolio.</p>
+        </footer>
 
-        <div id="start-menu" class="hidden">
-            <div class="start-left">
-                <div class="start-item" onclick="openWindow('bio')"><img
-                        src="https://img.icons8.com/color/48/000000/user-folder.png"> Biographie</div>
-                <div class="start-item" onclick="openWindow('projects')"><img
-                        src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"> Projets</div>
-                <div class="start-item" onclick="openWindow('contact')"><img
-                        src="https://img.icons8.com/color/48/000000/address-book.png"> Contacts</div>
-                <div class="start-item" onclick="openWindow('skills')"><img
-                        src="https://img.icons8.com/color/48/000000/brain.png"> Compétences</div>
-            </div>
-            <div class="start-right">
-                <div class="user-profile">
-                    <img src="images/profile.jpg" alt="Profile">
-                    <span>Michael</span>
-                </div>
-                <div class="start-links">
-                    <p>Documents</p>
-                    <p>Images</p>
-                    <p>Musique</p>
-                    <p>Ordinateur</p>
-                    <p>Panneau de config.</p>
-                </div>
-                <div class="shutdown-btn" onclick="location.reload()">
-                    Arrêter
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+        <audio id="background-audio" loop>
+            <source src="audio/gentle-rain-07-437321.mp3" type="audio/mpeg">
+            ton navigateur ne supporte pas sa
+        </audio>
+    </body>
 
 </html>
